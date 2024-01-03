@@ -1,18 +1,18 @@
 {
   "version": "0.1.0",
-  "description": "An example Snap written in TypeScript.",
-  "proposedName": "TypeScript Example",
+  "description": "The NYKS wallet Snap for Zkos.",
+  "proposedName": "Nyks wallet",
   "repository": {
     "type": "git",
     "url": "https://github.com/MetaMask/template-snap-monorepo.git"
   },
   "source": {
-    "shasum": "/bL+Jugx/3+81D1r/shUaYOQP5VUmoop6hcaY+Q33vM=",
+    "shasum": "pMrSpb0dj0ZHNk87TBBLAIi4bS9V9NIHES14zHnjb0o=",
     "location": {
       "npm": {
         "filePath": "dist/bundle.js",
         "iconPath": "images/icon.svg",
-        "packageName": "snap",
+        "packageName": "nkys-wallet",
         "registry": "https://registry.npmjs.org/"
       }
     }
@@ -22,7 +22,11 @@
     "endowment:rpc": {
       "dapps": true,
       "snaps": false
-    }
+    },
+    "snap_getEntropy": {},
+    "snap_manageState": {},
+    "endowment:webassembly": {},
+    "endowment:network-access": {}
   },
   "manifestVersion": "0.1"
 }
