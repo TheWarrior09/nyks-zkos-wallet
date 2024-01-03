@@ -1,5 +1,5 @@
 {
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "The NYKS wallet Snap for Zkos.",
   "proposedName": "Nyks wallet",
   "repository": {
@@ -7,7 +7,7 @@
     "url": "https://github.com/TheWarrior09/nyks-zkos-wallet.git"
   },
   "source": {
-    "shasum": "RG9+KsWkzI1G7RcBP+/J45y5cEwTdvnfM33XpevLwo8=",
+    "shasum": "JWSHMfFqg0VhyTR4d9CylEWJYR7oO/AGF8MPo81RjkY=",
     "location": {
       "npm": {
         "filePath": "dist/bundle.js",
