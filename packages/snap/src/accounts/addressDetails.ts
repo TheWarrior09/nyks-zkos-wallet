@@ -24,7 +24,10 @@ const getAddressOutputDetails = async (address: string) => {
 
 const getAddressDetails = async (signature: string, address: string) => {
   const addressOutputDetails = await getAddressOutputDetails(address);
-  const value = zkos.decryptOutputValue(signature, addressOutputDetails.output);
+  const value = zkos.decryptZkAccountValue(
+    signature,
+    zkos.extractZkAccountFromOutput(addressOutputDetails.output),
+  );
 
   return { value, ...addressOutputDetails };
 };
