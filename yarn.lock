@@ -17091,7 +17091,7 @@ __metadata:
     through2: ^4.0.2
     ts-jest: ^29.1.0
     typescript: ^4.7.4
-    zkos-wasm: ^0.2.1
+    zkos-wasm: ^0.2.2
   languageName: unknown
   linkType: soft
 
@@ -23215,9 +23215,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"zkos-wasm@npm:^0.2.1":
-  version: 0.2.1
-  resolution: "zkos-wasm@npm:0.2.1"
-  checksum: 0dc5b8de246989444476b290134cab31fe508c79ad91b804ff62bcfb893a17c7650489f28dfc0e2be33d3f65b655cf15d0a4a297a3718b1e49dd7d525dcd54b3
+"zkos-wasm@npm:^0.2.2":
+  version: 0.2.2
+  resolution: "zkos-wasm@npm:0.2.2"
+  checksum: 348abb0c8223b00a7cfb62f5be9664fafa1efd7bdfda50e8b3bcd1dff7587161daa41de0c192b7d9d07d52f34e4a37666ebeca14e5d9ccb4dfa8ba2551de248d
   languageName: node
   linkType: hard
