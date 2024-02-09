@@ -28,10 +28,9 @@ export const darkTransaction = async ({
   const output = await queryUtxoOutput(utxoHex);
   const outputString = JSON.stringify(output.result);
 
-  const coinTypeInput = zkos.createInputFromOutput(
+  const coinTypeInput = zkos.createInputCoinFromOutput(
     outputString,
     utxoString,
-    BigInt(0),
   );
 
   let receiver: string;
@@ -43,22 +42,22 @@ export const darkTransaction = async ({
 
     const receiverUtxo = zkos.createUtxoFromHex(toAddress);
 
-    receiver = zkos.createInputFromOutput(
+    receiver = zkos.createInputCoinFromOutput(
       receiverOutputString,
       receiverUtxo,
-      BigInt(0),
     );
   } else {
     receiver = toAddress;
   }
 
-  const darkTxSingleJson = zkos.darkTransactionSingle(
+  const darkTxSingleJson = zkos.privateTransactionSingle(
     signature,
     coinTypeInput,
     receiver,
     BigInt(amountSend),
     toAddressType === 'output',
     BigInt(amountAvailable - amountSend),
+    BigInt(1),
   );
 
   const { tx: darkTxSingle } = JSON.parse(darkTxSingleJson);

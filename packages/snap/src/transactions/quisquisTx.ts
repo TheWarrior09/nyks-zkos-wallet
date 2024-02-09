@@ -29,10 +29,9 @@ export const quisquisTransaction = async ({
   const output = await queryUtxoOutput(utxoHex);
   const outputString = JSON.stringify(output.result);
 
-  const coinTypeInput = zkos.createInputFromOutput(
+  const coinTypeInput = zkos.createInputCoinFromOutput(
     outputString,
     utxoString,
-    BigInt(0),
   );
 
   let receiver: string;
@@ -44,10 +43,9 @@ export const quisquisTransaction = async ({
 
     const receiverUtxo = zkos.createUtxoFromHex(toAddress);
 
-    receiver = zkos.createInputFromOutput(
+    receiver = zkos.createInputCoinFromOutput(
       receiverOutputString,
       receiverUtxo,
-      BigInt(0),
     );
   } else {
     receiver = toAddress;
@@ -62,6 +60,7 @@ export const quisquisTransaction = async ({
     toAddressType === 'output',
     BigInt(amountAvailable - amountSend),
     zkos.selectAnonymityAccounts(allUtxos.result.result, coinTypeInput),
+    BigInt(1),
   );
 
   console.log('quisquisTxSingle', quisquisTxSingle);
