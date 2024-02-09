@@ -37,8 +37,11 @@ export const onRpcRequest: OnRpcRequestHandler = async ({ request }) => {
 
             divider(),
 
-            text('**New trading account:**'),
-            text(newFundingAccount),
+            text('**New zkos account:**'),
+            text(newFundingAccount.zkAccount),
+
+            text('**New scalar:**'),
+            text(newFundingAccount.rScalar),
 
             text('**Amount:**'),
             text(amount.toString()),
